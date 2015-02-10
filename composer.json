@@ -1,0 +1,21 @@
+{
+    "name": "richweber/yii2-twitter",
+    "version":"1.0.0",
+    "description": "Yii2 extension to the Twitter API",
+    "keywords": ["yii2", "twitter", "api"],
+    "type": "yii2-extension",
+    "homepage": "https://github.com/RichWeber/yii2-twitter",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "RichWeber",
+            "email": "rbagatyi@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": { "richweber\\twitter\\": "" }
+    }
+}
