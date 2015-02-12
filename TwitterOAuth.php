@@ -4,59 +4,81 @@
  *
  * @copyright Copyright &copy; Roman Bahatyi, richweber.net, 2015
  * @package yii2-twitter
- * @version 1.0.0
+ * @version 1.0.1
  */
 
 namespace richweber\twitter;
-
-/**
- * Abraham Williams (abraham@abrah.am) http://abrah.am
- *
- * The first PHP Library to support OAuth for Twitter's REST API.
- */
-
-/**
- * Load OAuth lib. You can find it at http://oauth.net
- */
-require_once('OAuth.php');
 
 /**
  * Twitter OAuth class
  */
 class TwitterOAuth
 {
-    /* Contains the last HTTP status code returned. */
+    /**
+     * Contains the last HTTP status code returned
+     * @var integer
+     */
     public $http_code;
-    /* Contains the last API call. */
+
+    /**
+     * Contains the last API call
+     * @var string
+     */
     public $url;
-    /* Set up the API root URL. */
-    // public $host = "https://api.twitter.com/1/";
+
+    /**
+     * Set up the API root URL
+     * @var string
+     */
     public $host = "https://api.twitter.com/1.1/";
 
-    /* Set timeout default. */
+    /**
+     * Set timeout default
+     * @var integer
+     */
     public $timeout = 30;
-    /* Set connect timeout. */
+
+    /**
+     * Set connect timeout
+     * @var integer
+     */
     public $connecttimeout = 30;
-    /* Verify SSL Cert. */
+
+    /**
+     * Verify SSL Cert
+     * @var boolean
+     */
     public $ssl_verifypeer = FALSE;
-    /* Respons format. */
+
+    /**
+     * Respons format
+     * @var string
+     */
     public $format = 'json';
-    /* Decode returned json data. */
+
+    /**
+     * Decode returned json data
+     * @var boolean
+     */
     public $decode_json = TRUE;
-    /* Contains the last HTTP headers returned. */
+
+    /**
+     * Contains the last HTTP headers returned
+     * @var array
+     */
     public $http_info;
-    /* Set the useragnet. */
-    public $useragent = 'TwitterOAuth v0.2.0-beta2';
-    /* Immediately retry the API call if the response was not successful. */
-    //public $retry = TRUE;
+
+    /**
+     * Set the useragnet
+     * @var string
+     */
+    public $useragent = 'Yii2 TwitterOAuth';
 
     /**
      * Set API URLS
      */
     function accessTokenURL()  { return 'https://api.twitter.com/oauth/access_token'; }
-    // function authenticateURL() { return 'https://twitter.com/oauth/authenticate'; }
     function authenticateURL() { return 'https://api.twitter.com/oauth2/token'; }
-
     function authorizeURL()    { return 'https://twitter.com/oauth/authorize'; }
     function requestTokenURL() { return 'https://api.twitter.com/oauth/request_token'; }
 

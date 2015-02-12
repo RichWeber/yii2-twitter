@@ -1,6 +1,6 @@
 {
     "name": "richweber/yii2-twitter",
-    "version":"1.0.0",
+    "version":"1.0.1",
     "description": "Yii2 extension to the Twitter API",
     "keywords": ["yii2", "twitter", "api"],
     "type": "yii2-extension",

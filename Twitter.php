@@ -4,7 +4,7 @@
  *
  * @copyright Copyright &copy; Roman Bahatyi, richweber.net, 2015
  * @package yii2-twitter
- * @version 1.0.0
+ * @version 1.0.1
  */
 
 namespace richweber\twitter;
@@ -42,7 +42,7 @@ class Twitter
      */
     public function getTwitter()
     {
-        return new TwitterOAuth($this->consumer_key,$this->consumer_secret);
+        return new TwitterOAuth($this->consumer_key, $this->consumer_secret);
     }
 
     /**
@@ -51,6 +51,6 @@ class Twitter
      */
     public function getTwitterTokened($token,$secret)
     {
-        return new TwitterOAuth($this->consumer_key,$this->consumer_secret,$token,$secret);
+        return new TwitterOAuth($this->consumer_key, $this->consumer_secret, $token,$secret);
     }
 }
